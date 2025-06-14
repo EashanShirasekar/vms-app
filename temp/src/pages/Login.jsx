@@ -1,22 +1,17 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import './Login.css'
+import '../Login.css'
 
 export default function Login() {
   const navigate = useNavigate()
-
   const [employeeId, setEmployeeId] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
-    const validUsername = 'employee0280'
-    const validPassword = 'pass123'
-
-    if (employeeId === validUsername && password === validPassword) {
-      navigate('/employee/dashboard')
+    if (employeeId === 'employee0280' && password === 'pass123') {
+      navigate('/success') // temp success page
     } else {
       setError('Invalid username or password')
     }
@@ -40,7 +35,7 @@ export default function Login() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        {error && <p style={{ color: 'red', fontSize: '14px' }}>{error}</p>}
+        {error && <p style={{ color: 'red' }}>{error}</p>}
         <button type="submit">Login</button>
       </form>
     </div>
