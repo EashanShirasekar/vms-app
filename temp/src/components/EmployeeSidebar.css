@@ -1,0 +1,49 @@
+.hamburger {
+  position: fixed;
+  top: 2rem;
+  left: 1rem;
+  font-size: 1.7rem;
+  background: #ffffff;
+  border: none;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  z-index: 1001;
+  border-radius: 8px;
+  
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #1d2a35;
+  color: white;
+  padding: 2rem 1rem;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar h2 {
+  margin-bottom: 2rem;
+}
+
+.sidebar nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.sidebar nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
