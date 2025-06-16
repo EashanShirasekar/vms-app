@@ -1,8 +1,5 @@
-import AppRoutes from './routes'
-import './Login.css'
+import AppRoutes from './routes';
 
-function App() {
-  return <AppRoutes />
+export default function App() {
+  return <AppRoutes />;
 }
-
-export default App

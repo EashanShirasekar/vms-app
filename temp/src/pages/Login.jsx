@@ -1,33 +1,46 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import '../Login.css'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { login } from '../utils/auth';
+import '../Login.css';
 
 export default function Login() {
-  const navigate = useNavigate()
-  const [employeeId, setEmployeeId] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
+  const [username, setUsername] = useState('');
+  const [role, setRole] = useState('guard');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    if (employeeId === 'employee0280' && password === 'pass123') {
-      navigate('/success') // temp success page
-    } else {
-      setError('Invalid username or password')
+    e.preventDefault();
+
+    if (password !== 'pass123') {
+      setError('Invalid credentials');
+      return;
     }
-  }
+
+    login(username, role);
+    navigate(`/${role}/dashboard`);
+  };
 
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSubmit}>
-        <h2>Employee Login</h2>
+        <h2>Login</h2>
+
         <input
           type="text"
-          placeholder="Employee ID"
-          value={employeeId}
-          onChange={(e) => setEmployeeId(e.target.value)}
+          placeholder="Username/ID"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
           required
         />
+
+        <select value={role} onChange={(e) => setRole(e.target.value)}>
+          <option value="guard">Guard</option>
+          <option value="employee">Employee</option>
+          <option value="admin">Admin</option>
+        </select>
+
         <input
           type="password"
           placeholder="Password"
@@ -35,9 +48,11 @@ export default function Login() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+
         {error && <p style={{ color: 'red' }}>{error}</p>}
+
         <button type="submit">Login</button>
       </form>
     </div>
-  )
+  );
 }

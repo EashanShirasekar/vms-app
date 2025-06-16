@@ -1,11 +1,11 @@
-import { Navigate } from 'react-router-dom'
-import { getUserRole, isAuthenticated } from '../utils/auth'
+import { Navigate } from 'react-router-dom';
+import { getUser, isAuthenticated } from '../utils/auth';
 
-export default function ProtectedRoute({ children, role }) {
-  if (!isAuthenticated()) return <Navigate to="/login" />
+export default function ProtectedRoute({ children, allowedRoles }) {
+  const user = getUser();
 
-  const userRole = getUserRole()
-  if (userRole !== role) return <Navigate to={`/${userRole}`} />
+  if (!isAuthenticated()) return <Navigate to="/" />;
+  if (!allowedRoles.includes(user.role)) return <Navigate to={`/${user.role}/dashboard`} />;
 
-  return children
+  return children;
 }
