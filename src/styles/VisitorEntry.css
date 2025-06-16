@@ -1,0 +1,50 @@
+.visitor-entry {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #f4f6fa, #e1e8f0);
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.dashboard-header {
+  text-align: center;
+  background-color: #0b3d91;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.visitor-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.visitor-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.visitor-form button {
+  padding: 14px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.visitor-form button:hover {
+  background-color: #0066cc;
+}
