@@ -11,7 +11,7 @@ import Dashboard from './pages/Admin/AdminDashboard';
 import ManageUsers from './pages/Admin/ManageUsers';
 import Reports from './pages/Admin/Reports';
 import Settings from './pages/Admin/Settings';
-import VisitorLogs from './pages/Admin/VisitorLogs'; // Added
+import VisitorLogs from './pages/Admin/VisitorLogs';
 
 export default function AppRoutes() {
   return (
