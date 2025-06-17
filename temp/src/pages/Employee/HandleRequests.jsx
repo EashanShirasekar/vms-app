@@ -1,7 +1,7 @@
 import EmployeeSidebar from '../../components/EmployeeSidebar';
 import EmployeeTopbar from '../../components/EmployeeTopbar';
 import VisitorsRequestcard from '../../components/VisitorsRequestcard';
-import './HandleRequests.css';
+import '../../styles/HandleRequests.css';
 
 export default function HandleRequests() {
   return (

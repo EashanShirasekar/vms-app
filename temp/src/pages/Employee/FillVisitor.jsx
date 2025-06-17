@@ -1,7 +1,7 @@
 import EmployeeSidebar from '../../components/EmployeeSidebar';
 import EmployeeTopbar from '../../components/EmployeeTopbar';
 import VisitorForm from '../../components/VisitorForm';
-import './FillVisitor.css';
+import '../../styles/FillVisitor.css';
 
 export default function FillVisitor() {
   return (

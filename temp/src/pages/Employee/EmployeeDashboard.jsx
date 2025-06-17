@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import EmployeeSidebar from '../../components/EmployeeSidebar';
 import EmployeeTopbar from '../../components/EmployeeTopbar';
-import './Dashboard.css';
+import '../../styles/EmployeeDashboard.css';
 
-export default function Dashboard() {
+export default function EmployeeDashboard() {
   const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 

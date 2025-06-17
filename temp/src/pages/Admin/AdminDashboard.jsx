@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import './AdminDashboard.css';
+import { Link } from 'react-router-dom';
+import { mockUsers, mockVisitors } from '../../mockData';
+import '../../styles/AdminDashboard.css';
 
 export default function Dashboard() {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
@@ -8,16 +10,20 @@ export default function Dashboard() {
     setSidebarOpen(!isSidebarOpen);
   };
 
+  const totalUsers = mockUsers.length;
+  const pendingVisitors = mockVisitors.filter(v => v.status === 'Pending').length;
+
   return (
     <div className="admin-dashboard">
       <div className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
         <h2>Admin Panel</h2>
         <ul>
-          <li>Dashboard</li>
-          <li>Manage Users</li>
-          <li>Reports</li>
-          <li>Settings</li>
-          <li>Logout</li>
+          <li><Link to="/admin/dashboard">Dashboard</Link></li>
+          <li><Link to="/admin/users">Manage Users</Link></li>
+          <li><Link to="/admin/visitor-logs">Visitor Logs</Link></li> {/* Added */}
+          <li><Link to="/admin/reports">Reports</Link></li>
+          <li><Link to="/admin/settings">Settings</Link></li>
+          <li><Link to="/login">Logout</Link></li>
         </ul>
       </div>
 
@@ -29,7 +35,9 @@ export default function Dashboard() {
 
         <div className="dashboard-section">
           <div className="card">
-            <p>This is your dashboard. Here you can manage your app content.</p>
+            <h3>Dashboard Overview</h3>
+            <p>Total Users: {totalUsers}</p>
+            <p>Pending Visitors: {pendingVisitors}</p>
           </div>
         </div>
       </div>

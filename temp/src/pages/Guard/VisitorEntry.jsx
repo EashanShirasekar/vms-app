@@ -1,4 +1,4 @@
-import '../styles/VisitorEntry.css';
+import '../../styles/VisitorEntry.css';
 
 export default function VisitorEntry() {
   return (
@@ -19,5 +19,5 @@ export default function VisitorEntry() {
         <button type="submit">Submit Entry</button>
       </form>
     </div>
-  );
+  ); 
 }

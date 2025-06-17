@@ -1,0 +1,36 @@
+.reports {
+  padding: 2rem 2.5rem;
+  background-color: #f7f9fb;
+}
+
+.reports h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.stats {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}

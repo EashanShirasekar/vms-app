@@ -1,0 +1,27 @@
+.settings {
+  padding: 2rem 2.5rem;
+  background-color: #f7f9fb;
+}
+
+.settings h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.setting-item {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.setting-item label {
+  font-size: 1.1rem;
+}
+
+.setting-item input {
+  cursor: pointer;
+}

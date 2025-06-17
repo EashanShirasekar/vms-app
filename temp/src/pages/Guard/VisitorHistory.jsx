@@ -1,4 +1,4 @@
-import '../styles/GuardDashboard.css';
+import '../../styles/GuardDashboard.css';
 
 export default function VisitorHistory() {
   return (
