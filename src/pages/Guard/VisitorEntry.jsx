@@ -1,4 +1,4 @@
-import '../styles/VisitorEntry.css';
+import '../../styles/VisitorEntry.css';
 
 export default function VisitorEntry() {
   return (

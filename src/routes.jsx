@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
-import GuardDashboard from './pages/Dashboard/GuardDashboard';
-import VisitorEntry from './pages/VisitorEntry';
-import VisitorHistory from './pages/VisitorHistory';
+import GuardDashboard from './pages/Guard/GuardDashboard';
+import VisitorEntry from './pages/Guard/VisitorEntry';
+import VisitorHistory from './pages/Guard/VisitorHistory';
 import ProtectedRoute from './components/ProtectedRoute';
 
 export default function AppRoutes() {
